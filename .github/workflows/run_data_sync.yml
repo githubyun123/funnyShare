@@ -28,7 +28,6 @@ env:
   TITLE_GRID: Over 10km Runs # also here
   GITHUB_NAME: githubyun123
   GITHUB_EMAIL: 1144571250@qq.com
-  TITLE_GRID: 周观云
 
 jobs:
   sync:
