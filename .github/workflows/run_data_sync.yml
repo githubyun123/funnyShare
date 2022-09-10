@@ -74,11 +74,6 @@ jobs:
         run: |
           python scripts/keep_sync.py ${{ secrets.MOBILE }} ${{ secrets.KEEP_PASSWORD }} --with-gpx
 
-      - name: Run sync Joyrun script
-        if: env.RUN_TYPE == 'Joyrun'
-        run: |
-          python scripts/joyrun_sync.py ${{ secrets.MOBILE }} ${{ secrets.JOYRUNUID }} --from-uid-sid --with-gpx
-
       - name: Run sync Strava script
         if: env.RUN_TYPE == 'strava'
         run: |
