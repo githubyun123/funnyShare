@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/running_page', // Change to `/running_page` when running on github pages
+  pathPrefix: '/funnyShare', // Change to `/running_page` when running on github pages
   siteMetadata: {
     siteTitle: '王云的跑步记录',
     siteUrl: 'https://github.com/githubyun123',
