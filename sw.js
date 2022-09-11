@@ -27,24 +27,24 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-3032f1ced82e0a556dab.js"
+    "url": "webpack-runtime-c7238bc4e190ed347086.js"
   },
   {
     "url": "framework-8092182b2c8a45123cff.js"
   },
   {
-    "url": "app-698e7ec6b21835f91bde.js"
+    "url": "app-270297162fa74597af28.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7b20c7dd10c480b93e19a170b032eed7"
+    "revision": "7d391a459b8d6f4a1f2960f0b0b9dcf4"
   },
   {
     "url": "polyfill-14854c9902868fed1421.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "62b4973cec8437b7745c7ffd77ded009"
+    "revision": "e3c62240c71481758dc91840e8644b6a"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -149,12 +149,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/running_page`), ``)
+  pathname = pathname.replace(new RegExp(`^/funnyShare`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/running_page/app-698e7ec6b21835f91bde.js`))) {
+  if (!resources || !(await caches.match(`/funnyShare/app-270297162fa74597af28.js`))) {
     return await fetch(event.request)
   }
 
@@ -167,7 +167,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/running_page/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/funnyShare/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
