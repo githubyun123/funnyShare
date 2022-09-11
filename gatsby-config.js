@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     siteTitle: '王云的跑步记录',
     siteUrl: 'https://github.com/githubyun123',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+    logo: 'src/images/favicon.png',
     description: 'Personal site and blog',
     navLinks: [
       {
